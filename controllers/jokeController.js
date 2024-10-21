@@ -1,4 +1,4 @@
-const Joke = require('../models/Joke')
+const Joke = require('../models/joke')
 
 exports.addJoke = async (req, res) => {
   try {
