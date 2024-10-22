@@ -1,4 +1,4 @@
-const Joke = require('../models/joke')
+const { Joke } = require('../models')
 
 exports.addJoke = async (req, res) => {
   try {
@@ -11,6 +11,7 @@ exports.addJoke = async (req, res) => {
 
 exports.getAllJokes = async (req, res) => {
   try {
+    // console.log('Get request for all jokes')
     const jokes = await Joke.findAll()
     res.status(200).json(jokes)
   } catch (error) {
