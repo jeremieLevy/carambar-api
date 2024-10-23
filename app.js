@@ -9,7 +9,7 @@ const app = express()
 const jokesRoutes = require('./routes/jokes')
 const swaggerUi = require('swagger-ui-express')
 const swaggerJsDoc = require('swagger-jsdoc')
-const PORT = 3000
+const PORT = process.env.PORT || 3000 // Dynamic port set-up
 
 app.use(bodyParser.json())
 app.use(cors()) // Cross origin : Authorize request from other domains
